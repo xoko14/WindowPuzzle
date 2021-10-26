@@ -69,7 +69,7 @@ class OverwriteBehaviour extends Behaviour {
         });
     }
 }
-var behaviour = new OverwriteBehaviour();
+var behaviour = new ToggleBehaviour();
 function changeBehaviour() {
     var check = document.getElementById("selector");
     behaviour.reset();
