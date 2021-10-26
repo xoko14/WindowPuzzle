@@ -81,6 +81,12 @@ var behaviour: Behaviour = new OverwriteBehaviour()
 function changeBehaviour(): void{
 	var check = <HTMLInputElement> document.getElementById("selector")
     behaviour.reset()
-    if(check.checked) behaviour = new OverwriteBehaviour()
-    else behaviour = new ToggleBehaviour()
+    if(check.checked){
+        document.getElementById("txtHint").innerHTML = "Behaviour type: Overwrite"
+        behaviour = new OverwriteBehaviour()
+    }
+    else{
+        document.getElementById("txtHint").innerHTML = "Behaviour type: Toggle"
+        behaviour = new ToggleBehaviour()
+    }
 }

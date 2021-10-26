@@ -73,9 +73,13 @@ var behaviour = new OverwriteBehaviour();
 function changeBehaviour() {
     var check = document.getElementById("selector");
     behaviour.reset();
-    if (check.checked)
+    if (check.checked) {
+        document.getElementById("txtHint").innerHTML = "Behaviour type: Overwrite";
         behaviour = new OverwriteBehaviour();
-    else
+    }
+    else {
+        document.getElementById("txtHint").innerHTML = "Behaviour type: Toggle";
         behaviour = new ToggleBehaviour();
+    }
 }
 //# sourceMappingURL=script.js.map
