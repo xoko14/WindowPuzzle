@@ -1,14 +1,7 @@
-"use strict";
 class Behaviour {
     constructor() {
         this.lit = "🟨";
         this.notLit = "⬛";
-    }
-    reset() {
-        var elements = document.getElementsByClassName("window");
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].innerHTML = this.notLit;
-        }
     }
 }
 class ToggleBehaviour extends Behaviour {
@@ -24,6 +17,12 @@ class ToggleBehaviour extends Behaviour {
         }
         else {
             element.innerHTML = this.lit;
+        }
+    }
+    reset() {
+        var elements = document.getElementsByClassName("window");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerHTML = this.notLit;
         }
     }
 }
@@ -59,5 +58,16 @@ class OverwriteBehaviour extends Behaviour {
             elements[i].innerHTML = this.localState;
         }
     }
+    reset() {
+        var elements = document.getElementsByClassName("window");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerHTML = this.notLit;
+        }
+        this.buttonStates.forEach((value, key) => {
+            value = false;
+            document.getElementById(key).style.color = "#000000";
+        });
+    }
 }
 var behaviour = new OverwriteBehaviour();
+//# sourceMappingURL=script.js.map
