@@ -76,4 +76,11 @@ class OverwriteBehaviour extends Behaviour{
 
 }
 
-var behaviour: Behaviour = new OverwriteBehaviour() 
+var behaviour: Behaviour = new OverwriteBehaviour()
+
+function changeBehaviour(): void{
+	var check = <HTMLInputElement> document.getElementById("selector")
+    behaviour.reset()
+    if(check.checked) behaviour = new OverwriteBehaviour()
+    else behaviour = new ToggleBehaviour()
+}
