@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Window Puzzle</title>
+</head>
+<body>
+    <div class="content">
+        <table>
+            <tr>
+                <td><button id="a" onclick="flipGroup('a')">A</button></td>
+                <td><button id="b" onclick="flipGroup('b')">B</button></td>
+                <td><button id="c" onclick="flipGroup('c')">C</button></td>
+                <td><button id="d" onclick="flipGroup('d')">D</button></td>
+                <td><button id="clear" onclick="reset('window')">🔄</button></td>
+            </tr>
+            <tr>
+                <td><span class="window six a">⬛</span></td>
+                <td><span class="window six b">⬛</span></td>
+                <td><span class="window six c">⬛</span></td>
+                <td><span class="window six d">⬛</span></td>
+                <td><button id="six" onclick="flipGroup('six')">6</button></td>
+            </tr>
+            <tr>
+                <td><span class="window five a">⬛</span></td>
+                <td><span class="window five b">⬛</span></td>
+                <td><span class="window five c">⬛</span></td>
+                <td><span class="window five d">⬛</span></td>
+                <td><button id="five" onclick="flipGroup('five')">5</button></td>
+            </tr>
+            <tr>
+                <td><span class="window four a">⬛</span></td>
+                <td><span class="window four b">⬛</span></td>
+                <td><span class="window four c">⬛</span></td>
+                <td><span class="window four d">⬛</span></td>
+                <td><button id="four" onclick="flipGroup('four')">4</button></td>
+            </tr>
+            <tr>
+                <td><span class="window three a">⬛</span></td>
+                <td><span class="window three b">⬛</span></td>
+                <td><span class="window three c">⬛</span></td>
+                <td><span class="window three d">⬛</span></td>
+                <td><button id="three" onclick="flipGroup('three')">3</button></td>
+            </tr>
+            <tr>
+                <td><span class="window two a">⬛</span></td>
+                <td><span class="window two b">⬛</span></td>
+                <td><span class="window two c">⬛</span></td>
+                <td><span class="window two d">⬛</span></td>
+                <td><button id="two" onclick="flipGroup('two')">2</button></td>
+            </tr>
+            <tr>
+                <td><span class="window one a">⬛</span></td>
+                <td><span class="window one b">⬛</span></td>
+                <td><span class="window one c">⬛</span></td>
+                <td><span class="window one d">⬛</span></td>
+                <td><button id="one" onclick="flipGroup('one')">1</button></td>
+            </tr>
+            <tr>
+                <td><span class="window zero a">⬛</span></td>
+                <td><span class="door">🚪</span></td>
+                <td><span class="door">🚪</span></td>
+                <td><span class="window zero d">⬛</span></td>
+                <td><button id="zero" onclick="flipGroup('zero')">0</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
