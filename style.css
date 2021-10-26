@@ -25,6 +25,15 @@ table{
   margin: 0 auto;
 }
 
+.switch_container{
+  text-align: center;
+}
+
+.switch_container span{
+  vertical-align: middle;
+  display: inline-block;
+}
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
