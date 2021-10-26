@@ -71,9 +71,9 @@ class OverwriteBehaviour extends Behaviour {
 }
 var behaviour = new ToggleBehaviour();
 function changeBehaviour() {
-    var check = document.getElementById("selector");
+    var checkBox = document.getElementById("selector");
     behaviour.reset();
-    if (check.checked) {
+    if (checkBox.checked) {
         document.getElementById("txtHint").innerHTML = "Behaviour type: Overwrite";
         behaviour = new OverwriteBehaviour();
     }
